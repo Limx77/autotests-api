@@ -1,0 +1,11 @@
+{
+  "name": "Иван",
+  "age": 30,
+  "is_student": false,
+  "courses": ["Python", "QA Automation", "API Testing"],
+  "adress": {
+    "city": "Москва",
+    "zip": "100110",
+    "point": {"name": "Иван"}
+  }
+}
