@@ -12,3 +12,5 @@ def validate_json_schema(instance: Any, schema: dict) -> None:
     """
     validate(instance=instance, schema=schema, format_checker=FormatChecker())
 
+def validate_json_schema_get_user(instance: Any, schema: dict) -> None:
+    validate(instance=instance, schema=schema, format_checker=FormatChecker())
