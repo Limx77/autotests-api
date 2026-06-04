@@ -58,7 +58,7 @@ class FilesClient(APIClient):
         """
         return self.post(
             "/api/v1/files",
-            json=request.model_dump(),
+            json=request.model_dump(by_alias=True),
             files={"upload_file": open(request.upload_file, 'rb')},
             data={"filename": request.filename,"directory": request.directory}
         )

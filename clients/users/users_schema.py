@@ -26,7 +26,7 @@ class UpdateUserRequestSchema(BaseModel):
     """
     Описание структуры запроса на обновление пользователя.
     """
-    model_config = ConfigDict(populate_by_name=True)
+    model_config = ConfigDict(populate_by_name=True, from_attributes=True)
     """
     Настройка, позволяющая создавать модели прописываю в аргументах
     как alias так и python именование(CamelCase или snake_case)
@@ -40,7 +40,7 @@ class CreateUserRequestSchema(BaseModel):
     """
     Описание структуры запроса на создание пользователя.
     """
-    model_config= ConfigDict(populate_by_name=True)
+    model_config= ConfigDict(populate_by_name=True, from_attributes=True)
     """
     Настройка, позволяющая создавать модели прописываю в аргументах
     как alias так и python именование(CamelCase или snake_case)
