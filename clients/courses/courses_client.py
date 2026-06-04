@@ -105,7 +105,7 @@ class CoursesClient(APIClient):
         previewFileId, createdByUserId.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.post("/api/v1/courses", json=request.model_dump())
+        return self.post("/api/v1/courses", json=request.model_dump(by_alias=True))
 
     def update_course_api(self, course_id: str, request: UpdateCourseRequestSchema) -> Response:
         """
