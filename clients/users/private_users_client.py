@@ -1,5 +1,3 @@
-from sqlalchemy.util import TypingOnly
-
 from clients.api_client import APIClient
 from httpx import Response
 from typing import TypedDict
