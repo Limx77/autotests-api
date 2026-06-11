@@ -1,5 +1,6 @@
 import pytest
 
+
 @pytest.mark.xfail(reason="Найден баг из-за которого тест падает с ошибкой")
 def test_with_bug():
     assert 1 == 2

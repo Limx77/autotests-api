@@ -1,5 +1,6 @@
 import pytest
 
+
 @pytest.mark.skip(reason="skip test")
 def test_feature_in_development():
     ...

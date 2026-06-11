@@ -1,4 +1,6 @@
 import pytest
+
+
 #Для запуска pytest с использованием меток используется ключ -m
 @pytest.mark.smoke
 def test_smoke_case():

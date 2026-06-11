@@ -3,7 +3,7 @@ from _pytest.fixtures import SubRequest
 """
 Реализация самой простой параметризации. Тут один аргумент number, который принимает значения из списка (второго аргумента)
 """
-@pytest.mark.parametrize("number",[1,2,3,-1])
+@pytest.mark.parametrize("number", [1, 2, 3, -1])
 def test_numbers(number: int):
     assert number > 0
 
@@ -12,7 +12,7 @@ def test_numbers(number: int):
 ВАЖНО передаваемые атрибуты писать через запятую в одних кавычках, чтобы это считался как один аргумент
 иначе тест может выдать оишбку, так как 1ый аргумент это именование переменной, второй это сами переменные и третий какой-то другой параметр еще
 """
-@pytest.mark.parametrize("number,expected",[(1,1), (2,4), (3,9)])
+@pytest.mark.parametrize("number,expected", [(1, 1), (2, 4), (3, 9)])
 def test_several_numbers(number: int, expected: int):
     assert number ** 2 == expected
 
@@ -21,8 +21,8 @@ def test_several_numbers(number: int, expected: int):
 Тут происходит перемножение,то есть можно использовать 2-3 параметризации и они будут выполняться между собой 
 то есть атрибут os будет выполнен для каждого атрибута host
 """
-@pytest.mark.parametrize("os",["macos","windows", "debian", "linux"])
-@pytest.mark.parametrize("host",[
+@pytest.mark.parametrize("os", ["macos", "windows", "debian", "linux"])
+@pytest.mark.parametrize("host", [
     "https://dev.company.com",
     "https://stable.company.com",
     "https://prod.company.com"

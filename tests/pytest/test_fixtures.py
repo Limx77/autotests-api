@@ -1,4 +1,6 @@
 import pytest
+
+
 #Аргумент autouse=True говорит о том, что данная фикстура(функция) будет применяться ко всем тестам  каждый раз, даже если она в аргументах не указана
 #Можно комбинировать например autouse=True, scope="class"; autouse=True, scope="module" и тд
 @pytest.fixture(autouse=True)

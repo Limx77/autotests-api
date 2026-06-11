@@ -1,5 +1,6 @@
 import pytest
 
+
 @pytest.fixture(scope="function")
 def clear_books_database():
     print("[FIXTURE] Удаляем все данные из базы данных")
