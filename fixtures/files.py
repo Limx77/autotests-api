@@ -16,5 +16,5 @@ def files_client(function_user: UserFixture)-> FilesClient:
 def function_file(files_client: FilesClient):
     request = CreateFileRequestSchema(upload_file="./testdata/files/image.png")
     response = files_client.create_file(request)
-    return FilesClient(request= request, response= response)
+    return FileFixture(request= request, response= response)
 

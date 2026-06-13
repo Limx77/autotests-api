@@ -45,7 +45,7 @@ class FilesClient(APIClient):
         return self.get(f"/api/v1/files/{file_id}")
 
 
-    def create_file(self, request: CreateFileRequestSchema)->CreateFileResponseSchema:
+    def create_file(self, request: CreateFileRequestSchema)-> CreateFileResponseSchema:
         response = self.create_file_api(request)
         return CreateFileResponseSchema.model_validate_json(response.text)
 
