@@ -2,7 +2,8 @@ pytest_plugins = [
     "fixtures.users",
     "fixtures.authentication",
     "fixtures.files",
-    "fixtures.courses"
+    "fixtures.courses",
+    "fixtures.exercises"
 ]
 """
 Создается глобальный конфтест, благодаря которому при необходимости абсолютно все тесты могу достать нужную фикстуру, если им это необходимо и не нужно думать на иерархией.
