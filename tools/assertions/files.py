@@ -1,6 +1,8 @@
+from clients.errors_schema import ValidationErrorResponseSchema, ValidationErrorSchema
 from clients.files.files_schema import CreateFileRequestSchema, CreateFileResponseSchema, FileSchema, \
     GetFileResponseSchema
 from tools.assertions.base import assert_equal
+from tools.assertions.errors import assert_validation_error_response
 
 
 def assert_create_file_response(request: CreateFileRequestSchema, response: CreateFileResponseSchema):
@@ -41,3 +43,60 @@ def assert_get_file_response(get_file_response: GetFileResponseSchema, create_fi
     :raises AssertionError: Если данные файла не совпадают.
     """
     assert_file(get_file_response.file, create_file_response.file)
+
+def assert_create_file_with_empty_filename_response(actual: ValidationErrorResponseSchema):
+    """
+    Проверяет, что ответ на создание файла с пустым именем файла соответствует ожидаемой валидационной ошибке.
+
+    :param actual: Ответ от API с ошибкой валидации, который необходимо проверить.
+    :raises AssertionError: Если фактический ответ не соответствует ожидаемому.
+    """
+    expected= ValidationErrorResponseSchema(
+        details=[
+            ValidationErrorSchema(
+                type= "string_too_short",
+                input= "",
+                context= {"min_length": 1},
+                message= "String should have at least 1 character",
+                location= ["body", "filename"]
+            )
+        ]
+    )
+    assert_validation_error_response(actual, expected)
+
+
+def assert_create_file_with_empty_directory_response(actual: ValidationErrorResponseSchema):
+    """
+    Проверяет, что ответ на создание файла с пустым значением директории соответствует ожидаемой валидационной ошибке.
+
+    :param actual: Ответ от API с ошибкой валидации, который необходимо проверить.
+    :raises AssertionError: Если фактический ответ не соответствует ожидаемому.
+    """
+    expected= ValidationErrorResponseSchema(
+        details=[
+            ValidationErrorSchema(
+                type= "string_too_short",
+                input= "",
+                context= {"min_length": 1},
+                message= "String should have at least 1 character",
+                location= ["body", "directory"]
+            )
+        ]
+    )
+    assert_validation_error_response(actual, expected)
+
+
+def assert_get_file_with_incorrect_file_id_response(actual:ValidationErrorResponseSchema):
+    expected = ValidationErrorResponseSchema(
+        details=[
+            ValidationErrorSchema(
+                input="incorrect-file-id",
+                type= "uuid_parsing",
+                loc= ["path","file_id"],
+                msg= """Input should be a valid UUID, invalid character: expected an optional prefix
+                 of `urn:uuid:` followed by [0-9a-fA-F-], found `i` at 1""",
+                ctx= {"error": "invalid character: expected an optional prefix of `urn:uuid:` followed by [0-9a-fA-F-], found `i` at 1"}
+            )
+        ]
+    )
+    assert_validation_error_response(actual, expected)
