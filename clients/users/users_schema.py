@@ -10,7 +10,7 @@ class UserSchema(BaseModel):
     как alias так и python именование(CamelCase или snake_case)
     """
 
-    id: str
+    id: str = Field(alias="id")
     email: str
     last_name: str = Field(alias= 'lastName')
     first_name: str = Field(alias= 'firstName')

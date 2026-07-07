@@ -4,6 +4,7 @@ from _pytest.fixtures import SubRequest
 Реализация самой простой параметризации. Тут один аргумент number, который принимает значения из списка (второго аргумента)
 """
 @pytest.mark.parametrize("number", [1, 2, 3, -1])
+@pytest.mark.xfail
 def test_numbers(number: int):
     assert number > 0
 

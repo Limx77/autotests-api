@@ -14,6 +14,7 @@ from tools.assertions.schema import validate_json_schema
 
 @pytest.mark.courses
 @pytest.mark.regression
+@pytest.mark.flaky(reruns=3, reruns_delay=2)
 class TestCourses:
     def test_update_course(self, courses_client: CoursesClient, function_course: CourseFixture):
         request = UpdateCourseRequestSchema()

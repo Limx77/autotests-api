@@ -42,4 +42,4 @@ def assert_get_user_response(
     :param create_user_response: Ответ API при создании пользователя.
     :raises AssertionError: Если данные пользователя не совпадают.
     """
-    assert_user(get_user_response, create_user_response)
+    assert_user(get_user_response.user, create_user_response.user)
