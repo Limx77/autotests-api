@@ -9,7 +9,7 @@ class CourseFixture(BaseModel):
     request: CreateCourseRequestSchema
     response: CreateCourseResponseSchema
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="function")
 def courses_client(function_user) -> CoursesClient:
     return get_courses_client(function_user.authentication_user)
 
