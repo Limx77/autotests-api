@@ -92,7 +92,6 @@ class CoursesClient(APIClient):
 
     def create_course(self, request: CreateCourseRequestSchema)->CreateCourseResponseSchema:
         response = self.create_course_api(request)
-        print(response.json())
         return CreateCourseResponseSchema.model_validate_json(response.text)
 
     def create_course_api(self, request: CreateCourseRequestSchema) -> Response:

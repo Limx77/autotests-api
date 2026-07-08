@@ -1,5 +1,5 @@
 from clients.courses.course_schema import UpdateCourseRequestSchema, UpdateCourseResponseSchema, CourseSchema, \
-    GetCoursesResponseSchema, CreateCourseResponseSchema
+    GetCoursesResponseSchema, CreateCourseResponseSchema, CreateCourseRequestSchema
 from tests.base import assert_equal
 from tools.assertions.base import assert_length
 from tools.assertions.files import assert_file
@@ -32,3 +32,20 @@ def assert_get_courses_response(
     for index,create_course_response in enumerate(create_course_responses):
         assert_course(get_courses_response.courses[index], create_course_response.course)
 
+def assert_create_course_response(
+        actual: CreateCourseRequestSchema,
+        expected:CreateCourseResponseSchema
+):
+    """
+    Проверяет, что создание курса соответсвует запросу
+    :param actual: исходящий запрос, то есть актуальный
+    :param expected: ответ API с данными курса
+    :raises: AssertionError: Если хотябы одно значение не совпадает
+    """
+    assert_equal(actual.title, expected.course.title, "title")
+    assert_equal(actual.max_score, expected.course.max_score, "max_score")
+    assert_equal(actual.min_score, expected.course.min_score, "min_score")
+    assert_equal(actual.description, expected.course.description, "description")
+    assert_equal(actual.estimated_time, expected.course.estimated_time, "estimated_time")
+    assert_equal(actual.preview_file_id, expected.course.preview_file.id, "preview_file_id")
+    assert_equal(actual.created_by_user_id, expected.course.created_by_user.id, "created_by_user_id")
