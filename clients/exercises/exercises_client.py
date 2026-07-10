@@ -1,7 +1,9 @@
 from clients.api_client import APIClient
 from typing import TypedDict
 from httpx import Response
-from clients.exercises.exercises_schema import CreateExerciseRequestSchema, GetExercisesQuerySchema, UpdateExerciseRequestSchema, ExerciseSchema, UpdateExerciseResponseSchema, GetExerciseResponseSchema, GetExercisesResponseSchema
+from clients.exercises.exercises_schema import CreateExerciseRequestSchema, GetExercisesQuerySchema, \
+    UpdateExerciseRequestSchema, ExerciseSchema, UpdateExerciseResponseSchema, GetExerciseResponseSchema, \
+    GetExercisesResponseSchema, CreateExerciseResponseSchema
 from clients.private_http_builder import AuthenticationUserSchema, get_private_http_client
 
 
@@ -98,7 +100,7 @@ class ExercisesClient(APIClient):
         :param request: Словарь с title, maxScore, minScore, orderIndex, description, estimatedTime.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.post(f'/api/v1/exercises{exercise_id}', json=request.model_dump())
+        return self.patch(f'/api/v1/exercises/{exercise_id}', json=request.model_dump(exclude_none=True, by_alias=True))
 
     def delete_exercise_api(self, exercise_id: str)-> Response:
         """
@@ -117,9 +119,9 @@ class ExercisesClient(APIClient):
         response = self.get_exercise_api(exercise_id)
         return GetExerciseResponseSchema.model_validate_json(response.text)
 
-    def create_exercise(self,request: CreateExerciseRequestSchema)->GetExerciseResponseSchema:
+    def create_exercise(self,request: CreateExerciseRequestSchema)->CreateExerciseResponseSchema:
         response = self.create_exercise_api(request)
-        return GetExerciseResponseSchema.model_validate_json(response.text)
+        return CreateExerciseResponseSchema.model_validate_json(response.text)
 
     def update_exercise(self,exercise_id: str, request: UpdateExerciseRequestSchema)->GetExerciseResponseSchema:
         response = self.update_exercise_api(exercise_id, request)

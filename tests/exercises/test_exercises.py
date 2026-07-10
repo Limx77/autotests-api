@@ -1,14 +1,15 @@
 from http import HTTPStatus
-
 import pytest
 from clients.exercises.exercises_client import ExercisesClient
 from clients.exercises.exercises_schema import CreateExerciseRequestSchema, CreateExerciseResponseSchema, \
-    GetExerciseResponseSchema
+    GetExerciseResponseSchema, UpdateExerciseResponseSchema, UpdateExerciseRequestSchema
 from fixtures.courses import CourseFixture
 from fixtures.exercises import ExerciseFixture
 from tests.base import assert_status_code
-from tools.assertions.exercises import assert_create_exercise_response, assert_get_exercise_response
+from tools.assertions.exercises import assert_create_exercise_response, assert_get_exercise_response, \
+    assert_update_exercise_response
 from tools.assertions.schema import validate_json_schema
+from tools.fakers import fake
 
 
 @pytest.mark.exercises
@@ -39,3 +40,22 @@ class TestExercises:
         assert_get_exercise_response(response_data, function_exercise.response)
 
         validate_json_schema(response.json(), response_data.model_json_schema())
+
+    @pytest.mark.parametrize("update_request", [
+        UpdateExerciseRequestSchema(title=fake.sentence()),
+        UpdateExerciseRequestSchema(max_score=fake.max_score()),
+        UpdateExerciseRequestSchema(min_score=fake.min_score()),
+        UpdateExerciseRequestSchema(order_index=fake.integer()),
+        UpdateExerciseRequestSchema(description=fake.text()),
+        UpdateExerciseRequestSchema(estimated_time=fake.estimated_time()),
+        UpdateExerciseRequestSchema(),
+    ])
+    def test_update_exercise(self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture, update_request):
+        print(update_request.model_dump(exclude_none=True, by_alias=True))
+        response = exercises_client.update_exercise_api(function_exercise.response.exercise.id, update_request)
+        response_data = UpdateExerciseResponseSchema.model_validate_json(response.text)
+
+        assert_status_code(response.status_code, HTTPStatus.OK)
+
+        assert_update_exercise_response(update_request, response_data)
+        validate_json_schema(instance=response.json(), schema=response_data.model_json_schema())

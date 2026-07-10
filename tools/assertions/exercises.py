@@ -1,5 +1,5 @@
 from clients.exercises.exercises_schema import CreateExerciseRequestSchema, CreateExerciseResponseSchema, \
-    GetExerciseResponseSchema, ExerciseSchema
+    GetExerciseResponseSchema, ExerciseSchema, UpdateExerciseRequestSchema, UpdateExerciseResponseSchema
 from tests.base import assert_equal
 
 
@@ -48,3 +48,12 @@ def assert_get_exercise_response(
     :raises AssertionError: Если данные задания не совпадают.
     """
     assert_exercise(get_exercise_response.exercise, create_exercise_response.exercise)
+
+def assert_update_exercise_response(request: UpdateExerciseRequestSchema, response: UpdateExerciseResponseSchema):
+    """
+    Метод перебирает все переданные значения в запросе и сравнивает эти значения с телом ответа
+    :param request: измененные значения
+    :param response: тело ответа, с которым сравниваются ТОЛЬКО измененые значения
+    """
+    for field, value in request.model_dump(exclude_none=True).items():
+        assert_equal(value, getattr(response.exercise, field), f"{field}")
