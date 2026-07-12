@@ -1,5 +1,7 @@
 from http import HTTPStatus
 import pytest
+
+from clients.errors_schema import InternalErrorResponseSchema
 from clients.exercises.exercises_client import ExercisesClient
 from clients.exercises.exercises_schema import CreateExerciseRequestSchema, CreateExerciseResponseSchema, \
     GetExerciseResponseSchema, UpdateExerciseResponseSchema, UpdateExerciseRequestSchema
@@ -7,7 +9,7 @@ from fixtures.courses import CourseFixture
 from fixtures.exercises import ExerciseFixture
 from tests.base import assert_status_code
 from tools.assertions.exercises import assert_create_exercise_response, assert_get_exercise_response, \
-    assert_update_exercise_response
+    assert_update_exercise_response, assert_exercise_not_found_response
 from tools.assertions.schema import validate_json_schema
 from tools.fakers import fake
 
@@ -59,3 +61,20 @@ class TestExercises:
 
         assert_update_exercise_response(update_request, response_data)
         validate_json_schema(instance=response.json(), schema=response_data.model_json_schema())
+
+    def test_delete_exercise(self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture):
+        exercise_id = exercises_client.create_exercise_api(function_exercise.request).json()["exercise"]["id"]
+        print(exercise_id)
+        response = exercises_client.delete_exercise_api(exercise_id)
+        print(response.json())
+        response_after_delete = exercises_client.get_exercise_api(exercise_id)
+        response_after_delete_data = InternalErrorResponseSchema.model_validate_json(response_after_delete.text)
+
+        assert_status_code(response.status_code, HTTPStatus.OK)
+        assert_status_code(response_after_delete.status_code, HTTPStatus.NOT_FOUND)
+
+        assert_exercise_not_found_response(response_after_delete_data)
+
+        validate_json_schema(instance=response_after_delete.json(), schema=response_after_delete_data.model_json_schema())
+
+

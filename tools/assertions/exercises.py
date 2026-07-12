@@ -1,6 +1,8 @@
+from clients.errors_schema import InternalErrorResponseSchema
 from clients.exercises.exercises_schema import CreateExerciseRequestSchema, CreateExerciseResponseSchema, \
     GetExerciseResponseSchema, ExerciseSchema, UpdateExerciseRequestSchema, UpdateExerciseResponseSchema
 from tests.base import assert_equal
+from tools.assertions.errors import assert_internal_error_response
 
 
 def assert_create_exercise_response(request: CreateExerciseRequestSchema, response: CreateExerciseResponseSchema):
@@ -57,3 +59,6 @@ def assert_update_exercise_response(request: UpdateExerciseRequestSchema, respon
     """
     for field, value in request.model_dump(exclude_none=True).items():
         assert_equal(value, getattr(response.exercise, field), f"{field}")
+
+def assert_exercise_not_found_response(actual: InternalErrorResponseSchema, expected = InternalErrorResponseSchema(details="Not Found")):
+    assert_internal_error_response(actual, expected)
