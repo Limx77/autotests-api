@@ -81,7 +81,7 @@ class ExercisesClient(APIClient):
         return self.get('/api/v1/exercises', params=query)
 
     def get_exercise_api(self, exercise_id: str)-> Response:
-        return self.get(f'/api/v1/exercises{exercise_id}')
+        return self.get(f'/api/v1/exercises/{exercise_id}')
 
     def create_exercise_api(self, request: CreateExerciseRequestSchema)-> Response:
         """

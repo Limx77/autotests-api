@@ -60,5 +60,5 @@ def assert_update_exercise_response(request: UpdateExerciseRequestSchema, respon
     for field, value in request.model_dump(exclude_none=True).items():
         assert_equal(value, getattr(response.exercise, field), f"{field}")
 
-def assert_exercise_not_found_response(actual: InternalErrorResponseSchema, expected = InternalErrorResponseSchema(details="Not Found")):
+def assert_exercise_not_found_response(actual: InternalErrorResponseSchema, expected = InternalErrorResponseSchema(details="Exercise not found")):
     assert_internal_error_response(actual, expected)
