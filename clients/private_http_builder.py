@@ -1,3 +1,4 @@
+import allure
 from httpx import Client
 from pydantic import BaseModel, EmailStr
 from clients.authentication.authentication_client import get_authentication_client, LoginRequestSchema
@@ -11,6 +12,7 @@ class AuthenticationUserSchema(BaseModel, frozen= True):
     password: str
 
 @lru_cache(maxsize=None) #данный декоратор позволяет кешировать, то есть сохранять данные и если при вызове функции данные никак не менялись, то они просто подставятся не обращаясь к апи и не делая запрос
+@allure.step('get private client')
 def get_private_http_client(user: AuthenticationUserSchema)-> Client:
     """
     Функция создаёт экземпляр httpx.Client с аутентификацией пользователя.

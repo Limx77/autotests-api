@@ -1,7 +1,7 @@
 from http import HTTPStatus
 
 import pytest
-
+import allure
 from clients.courses.course_schema import UpdateCourseRequestSchema, UpdateCourseResponseSchema, GetCoursesQuerySchema, \
     GetCoursesResponseSchema, CreateCourseRequestSchema, CreateCourseResponseSchema
 from clients.courses.courses_client import CoursesClient
@@ -9,6 +9,9 @@ from fixtures.courses import CourseFixture
 from fixtures.files import FileFixture
 from fixtures.users import UserFixture
 from tests.base import assert_status_code
+from tools.allure.features import AllureFeatures
+from tools.allure.stories import AllureStories
+from tools.allure.tags import AllureTag
 from tools.assertions.courses import assert_update_course_response, assert_get_courses_response, \
     assert_create_course_response
 from tools.assertions.schema import validate_json_schema
@@ -17,7 +20,13 @@ from tools.assertions.schema import validate_json_schema
 @pytest.mark.courses
 @pytest.mark.regression
 @pytest.mark.flaky(reruns=3, reruns_delay=2)
+@allure.tag(AllureTag.COURSES, AllureTag.REGRESSION)
+@allure.feature(AllureFeatures.COURSES)
 class TestCourses:
+
+    @allure.tag(AllureTag.GET_ENTITIES)
+    @allure.title("update course")
+    @allure.story(AllureStories.UPDATE_ENTITY)
     def test_update_course(self, courses_client: CoursesClient, function_course: CourseFixture):
         request = UpdateCourseRequestSchema()
         response = courses_client.update_course_api(function_course.response.course.id, request=request)
@@ -28,6 +37,9 @@ class TestCourses:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.tag(AllureTag.GET_ENTITIES)
+    @allure.title("get courses")
+    @allure.story(AllureStories.GET_ENTITIES)
     def test_get_courses(self, courses_client: CoursesClient, function_user: UserFixture, function_course: CourseFixture):
         query = GetCoursesQuerySchema(user_id=function_user.response.user.id)
         response = courses_client.get_courses_api(query=query)
@@ -38,6 +50,9 @@ class TestCourses:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.tag(AllureTag.CREATE_ENTITY)
+    @allure.title("create course")
+    @allure.story(AllureStories.CREATE_ENTITY)
     def test_create_course(self, courses_client: CoursesClient,
                            function_user: UserFixture,
                            function_file: FileFixture):

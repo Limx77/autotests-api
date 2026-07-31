@@ -1,7 +1,9 @@
 from typing import Any
+
+import allure
 from jsonschema import validate, FormatChecker
 
-
+@allure.step("Validate JSON schema")
 def validate_json_schema(instance: Any, schema: dict) -> None:
     """
     Проверяет, соответствует ли JSON-объект (instance) заданной JSON-схеме (schema).
