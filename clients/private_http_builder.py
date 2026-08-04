@@ -5,6 +5,7 @@ from clients.authentication.authentication_client import get_authentication_clie
 from functools import lru_cache
 
 from clients.authentication.authentication_schema import LoginRequestSchema
+from clients.event_hooks import curl_event_hook
 
 
 class AuthenticationUserSchema(BaseModel, frozen= True):
@@ -15,11 +16,11 @@ class AuthenticationUserSchema(BaseModel, frozen= True):
 @allure.step('get private client')
 def get_private_http_client(user: AuthenticationUserSchema)-> Client:
     """
-    Функция создаёт экземпляр httpx.Client с аутентификацией пользователя.
+        Функция создаёт экземпляр httpx.Client с аутентификацией пользователя.
 
-    :param user: Объект AuthenticationUserSchema с email и паролем пользователя.
-    :return: Готовый к использованию объект httpx.Client с установленным заголовком Authorization.
-    """
+        :param user: Объект AuthenticationUserSchema с email и паролем пользователя.
+        :return: Готовый к использованию объект httpx.Client с установленным заголовком Authorization.
+        """
     authentication_client = get_authentication_client()
 
     login_request = LoginRequestSchema(email=user.email, password=user.password)
@@ -27,5 +28,6 @@ def get_private_http_client(user: AuthenticationUserSchema)-> Client:
     return Client(
         timeout=100,
         base_url='http://localhost:8000',
-        headers={'Authorization': f"Bearer {login_response.token.access_token}"}
+        headers={'Authorization': f"Bearer {login_response.token.access_token}"},
+        event_hooks={'request': [curl_event_hook]}
     )

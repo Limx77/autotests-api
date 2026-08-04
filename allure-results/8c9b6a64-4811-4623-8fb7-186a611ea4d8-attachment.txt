@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTA0VDE4OjQ4OjQzLjk1Mjg2OSIsInVzZXJfaWQiOiI4NDc2ZWNlNy03MTc1LTQ2NTMtOTJmZC1hNWFlMGFjMWJiM2EifQ.SvCmveg4W21-0BtnBryomFpcBHN-25OQ3iheUSVToyg' \
+ -H 'content-length: 562' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Radio worry second find. Man fly quite soldier pretty within. Develop college clear important.\nLook treat I president hotel large. Key second chance identify. Ten you analysis south.","maxScore":86,"minScore":19,"description":"Design decade hit trade cause. Identify thus language place. Forget ground admit message local want political.\nThem deep beautiful everyone arrive less may. Keep necessary true watch.","estimatedTime":"4 weeks","previewFileId":"7ee2faba-8596-453a-80ab-54e0c8f3bac6","createdByUserId":"8476ece7-7175-4653-92fd-a5ae0ac1bb3a"}'

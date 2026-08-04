@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTA0VDE4OjQ5OjA1LjE4OTc1MCIsInVzZXJfaWQiOiIwN2YwY2E3OC01YzMwLTQyOTMtYmVmYi0xYzlmOGVjYjY2M2IifQ.W3DV1fJZJ3cKSfR1ndcZl3sQlutVmjgGwFCP2Zn23II' \
+ -H 'content-length: 546' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Which red why wear company all. Majority exactly itself open how while past.\nThemselves everybody southern product team live. Drive two while listen life laugh last.","maxScore":91,"minScore":3,"description":"Spend rule Republican stop.\nPm various along. Officer particularly between house newspaper professional.\nCheck spend stand explain continue really. Stuff board better officer consider.","estimatedTime":"3 weeks","previewFileId":"17d0c7b0-f261-4498-ac13-296435c756fd","createdByUserId":"07f0ca78-5c30-4293-befb-1c9f8ecb663b"}'

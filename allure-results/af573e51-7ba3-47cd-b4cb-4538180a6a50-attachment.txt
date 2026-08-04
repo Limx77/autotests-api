@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTA0VDE4OjQ4OjE1LjkzNzk0OCIsInVzZXJfaWQiOiI1NmM1ZjEyZS00MzhjLTRjMmYtOWVkNi03ODEyMjM2M2MxMjMifQ.6IEe_0Hd1dY-3HTXyY7y60E2oIkgApyszRmsJT3u-hI' \
+ -H 'content-length: 376' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Stage six agent common how group check. Reflect administration herself despite race rate board discussion.","maxScore":38,"minScore":6,"description":"Itself general instead huge record thing since. Table box first friend rest.","estimatedTime":"6 weeks","previewFileId":"ade1e3b6-1c29-46fd-8a5b-27aeb21196f5","createdByUserId":"56c5f12e-438c-4c2f-9ed6-78122363c123"}'

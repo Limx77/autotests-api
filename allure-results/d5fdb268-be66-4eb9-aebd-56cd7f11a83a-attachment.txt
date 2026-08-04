@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTA0VDE4OjQ4OjAxLjk5NzIzMSIsInVzZXJfaWQiOiI4YzUyOTY4Yy04NmI3LTRjYTgtYTIxYi0wMDgyM2Y1NTcwNTgifQ.vrgBOesZGgFtTeMyFA_9R7Qdrs_TilOcWcVyppGlLPQ' \
+ -H 'content-length: 452' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Home hair all. Resource environment remain sport bank more. Far play line tell ability.\nReport probably pay better great piece.","maxScore":66,"minScore":35,"description":"Five may community well. Name continue huge involve huge. Population than bar agent machine.\nTerm school recently marriage star.","estimatedTime":"6 weeks","previewFileId":"b3908f07-f8fc-4c85-88cd-6a33371cf1ed","createdByUserId":"8c52968c-86b7-4ca8-a21b-00823f557058"}'

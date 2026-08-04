@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTA0VDE4OjQ4OjIyLjkwNTM1NyIsInVzZXJfaWQiOiI0NTQ2YjE1Yi1kOTA2LTRmMmYtOTVmNy1iNzI2ODNjMDllYmEifQ.GzarYLGGqNFxwnegc33lYLDXzsotkGpngGRtUjjVbkI' \
+ -H 'content-length: 573' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Who bad seat. Sound consider role face least spring than fly. Bar campaign both design school.\nPattern matter fire customer report. Both page imagine second chair threat. Yes nothing sport rest.","maxScore":69,"minScore":1,"description":"Matter break dream. Wide hear actually.\nStructure seat key education in guy. Wife first total western. Wide owner study those receive difference economic.\nTo eye city present memory.","estimatedTime":"5 weeks","previewFileId":"a983f52f-3fef-4b4e-b00a-cb278402bf28","createdByUserId":"4546b15b-d906-4f2f-95f7-b72683c09eba"}'

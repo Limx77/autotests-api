@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTA0VDE4OjQ4OjI5LjkwOTUxOSIsInVzZXJfaWQiOiIzMjVlZTk3YS01Y2QwLTQyMGQtYjAzNS04Y2VlNTYxNzJiNWIifQ.fMur9iK7BSv7wWwuLLIJM9Eaa72YJ7fjtBFHVTkJF0c' \
+ -H 'content-length: 491' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Until base opportunity himself her ground. Follow structure yourself member apply tough audience. Six class staff partner understand continue.","maxScore":58,"minScore":23,"description":"North single book scene man eye turn. Expect fish past fear particular.\nRegion open law past. Nice head later card. Store husband individual participant.","estimatedTime":"6 weeks","previewFileId":"c771d1f5-2d06-469b-83c7-74af34ea3dec","createdByUserId":"325ee97a-5cd0-420d-b035-8cee56172b5b"}'

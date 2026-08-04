@@ -30,6 +30,7 @@ class TestCourses:
     def test_update_course(self, courses_client: CoursesClient, function_course: CourseFixture):
         request = UpdateCourseRequestSchema()
         response = courses_client.update_course_api(function_course.response.course.id, request=request)
+        print(response.text)
         response_data = UpdateCourseResponseSchema.model_validate_json(response.text)
 
         assert_status_code(response.status_code, HTTPStatus.OK)
