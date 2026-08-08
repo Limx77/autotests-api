@@ -60,7 +60,7 @@ class FilesClient(APIClient):
         return self.post(
             "/api/v1/files",
             json=request.model_dump(by_alias=True),
-            files={"upload_file": open(request.upload_file, 'rb')},
+            files = {"upload_file": request.upload_file.read_bytes()},
             data={"filename": request.filename,"directory": request.directory}
         )
 
