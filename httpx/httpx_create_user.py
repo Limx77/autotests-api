@@ -9,5 +9,3 @@ payload = {
 }
 
 response = httpx.post('http://localhost:8000/api/v1/users', json = payload)
-print(response.status_code)
-print(response.json())

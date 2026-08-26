@@ -2,6 +2,9 @@ from typing import Any
 
 import allure
 from jsonschema import validate, FormatChecker
+from tools.logger import get_logger
+
+logger = get_logger('SCHEMA_ASSERTIONS')
 
 @allure.step("Validate JSON schema")
 def validate_json_schema(instance: Any, schema: dict) -> None:
@@ -12,6 +15,7 @@ def validate_json_schema(instance: Any, schema: dict) -> None:
     :param schema: Ожидаемая JSON-schema.
     :raises jsonschema.exceptions.ValidationError: Если instance не соответствует schema.
     """
+    logger.info("Validate JSON schema")
     validate(instance=instance, schema=schema, format_checker=FormatChecker())
 
 def validate_json_schema_get_user(instance: Any, schema: dict) -> None:

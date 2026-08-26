@@ -86,9 +86,7 @@ class TestExercises:
     @allure.step('Delete exercise')
     def test_delete_exercise(self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture):
         exercise_id = exercises_client.create_exercise_api(function_exercise.request).json()["exercise"]["id"]
-        print(exercise_id)
         response = exercises_client.delete_exercise_api(exercise_id)
-        print(response.json())
         response_after_delete = exercises_client.get_exercise_api(exercise_id)
         response_after_delete_data = InternalErrorResponseSchema.model_validate_json(response_after_delete.text)
 
