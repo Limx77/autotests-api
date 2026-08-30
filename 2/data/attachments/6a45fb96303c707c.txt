@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTMwVDEyOjU1OjA5LjYxMjg1OSIsInVzZXJfaWQiOiJlOWIwZDdmMS00YzY3LTQxYzgtYmMzZi01MzI2MzQzMWMxOGIifQ.ubbzzd06cIz_Gp4tfgGUwR45BxFD_hJErEDkdikKDxo' \
+ -H 'content-length: 541' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Air resource generation leader technology doctor alone foot. Clear start seven.\nOne face American cost upon market girl. Group word husband fear. Truth floor Republican almost sense marriage.","maxScore":75,"minScore":39,"description":"Officer record ago. Tend include answer yourself.\nIndicate leave mouth drug theory Republican. Effect rise audience end. Win medical million per body me.","estimatedTime":"5 weeks","previewFileId":"88779cd5-756f-4205-95ed-d05e486f9e82","createdByUserId":"e9b0d7f1-4c67-41c8-bc3f-53263431c18b"}'

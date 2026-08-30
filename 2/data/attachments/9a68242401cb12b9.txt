@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTMwVDEyOjU1OjA2LjE4MTEzNyIsInVzZXJfaWQiOiIzMzlkNjUzZS05YmRiLTQ5M2YtYTMxMi00Mjg5NzMxZjkwZjMifQ._ekCFK3A3Tiro_EuMKkpAoU6M7fddk3bCy9hSDZhX4g' \
+ -H 'content-length: 475' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Create listen machine affect condition street father believe. Pass daughter participant effect.","maxScore":60,"minScore":47,"description":"Inside science treat instead. Run coach eat group game space environment.\nSecurity card across every cut appear. Most several eye very movement individual gun. Six risk really defense.","estimatedTime":"9 weeks","previewFileId":"24f21223-305c-4357-8147-3360bca97a26","createdByUserId":"339d653e-9bdb-493f-a312-4289731f90f3"}'

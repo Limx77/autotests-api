@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8000/api/v1/courses/d0169219-673d-444f-a6af-4888256f17ad' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTMwVDEyOjU1OjAzLjQyOTU0MyIsInVzZXJfaWQiOiJlNDU0YWM1NS1mNWZjLTQyMzEtOTRmYi04NzM3MTQzODUwMjAifQ.u33Ly0VmBkdop0rUSnvwRj6VXisbR98U_Wf00A1CG3A' \
+ -H 'content-length: 242' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Few image tend foot they. Need bit treat score.\nMilitary sister car newspaper strong area may.","maxScore":43,"minScore":26,"description":"Become those decision exactly. Six share phone result agree per.","estimatedTime":"6 weeks"}'

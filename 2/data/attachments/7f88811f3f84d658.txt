@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8000/api/v1/exercises/6572d106-39a3-41eb-b500-7c4e6d633969' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTMwVDEyOjU1OjA4Ljk2NTM0MSIsInVzZXJfaWQiOiJkYzA5NTE4YS0wY2Q0LTRkYTgtOGUxMy02Nzc2NzY5MDgzMGIifQ.4RDFjyxT37Opl43IFlqmJSolUcltVzrKlLc3fAJnuVU' \
+ -H 'content-length: 207' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Option test society become foot make.","maxScore":80,"minScore":9,"orderIndex":66,"description":"Example decade finally. Information allow top forward amount management.","estimatedTime":"9 weeks"}'

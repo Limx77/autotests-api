@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTMwVDEyOjU1OjA3LjU3NjA3OCIsInVzZXJfaWQiOiJiZDkzZWQyZi1jNzMzLTRmYWUtOWI4Yi0yYWVjNjg3YTk4YjgifQ.h3YxWI-fwBwrq_dl0ghBObXB7J2LpAYK6GSpwRnHj_I' \
+ -H 'content-length: 516' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Prevent fear home. Spring face sea recently old thousand day.\nWhen note career window than. Discover sense next official according physical. Range key during night time firm friend two.","maxScore":49,"minScore":6,"description":"Low vote because office up west. Population near foot must.\nDoor land order. Event all space meeting near least good. Senior free high.","estimatedTime":"6 weeks","previewFileId":"f2d44433-2c91-4bad-9312-0458b3b8afac","createdByUserId":"bd93ed2f-c733-4fae-9b8b-2aec687a98b8"}'

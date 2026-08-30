@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/exercises' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTMwVDEyOjU1OjEwLjYzMjg4MCIsInVzZXJfaWQiOiJjYjMxOTZmOS0zODVlLTQzMzctODRiZS1jNTcyOTk4OGQxOWEifQ.cItsInK_EvmxLlw_i70c_KtxGPZ0JSfwMomD8nfgHXc' \
+ -H 'content-length: 363' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Life show of cover total.","courseId":"d8661fd9-6fb4-42f0-a0e0-b8727e6e1e4b","maxScore":93,"minScore":1,"orderIndex":66,"description":"Mean rest strong one next crime. Tax contain peace voice strong serious make. Early trip over theory happen.\nCompany across onto interesting.\nView lead crime court inside majority evening.","estimatedTime":"8 weeks"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTMwVDEyOjU1OjA0LjA4NTY5NiIsInVzZXJfaWQiOiJiZTljNzZmNy00MjQ4LTRjMmUtYmYyNC1lMjRmMzRmMDA5MDAifQ.0sHnOd5ii2pbUmcqL7TSAKnGBJ9JbsF4nlM1lAuDj6c' \
+ -H 'content-length: 587' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Past those century suggest. Huge walk stuff yard candidate. Minute cause still increase last.\nAcross game far will paper no key. Send around office effect most fight. Learn current on will put.","maxScore":57,"minScore":44,"description":"Degree strategy defense role environment result. Everybody information rest affect simple.\nNearly almost parent word. Success candidate model myself eight blood. Young suggest song out author unit.","estimatedTime":"7 weeks","previewFileId":"4f4741a5-3b1b-4577-992e-4812c98cb636","createdByUserId":"be9c76f7-4248-4c2e-bf24-e24f34f00900"}'

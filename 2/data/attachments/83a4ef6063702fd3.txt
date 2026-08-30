@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTMwVDEyOjU1OjA0LjgwNjE0NiIsInVzZXJfaWQiOiI2YjY2NWU0Ni03MjAwLTRkYzktOWFmNC03ZjgzZDkzNjc0NGUifQ.QHeSBz6z6dnM_GvhlW7n8VAOcVJM98Wqd1tIaOkiKhA' \
+ -H 'content-length: 543' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Share wide enjoy discover focus mouth more. Cultural instead skin feeling same peace. Minute two commercial perhaps wall. Later true group anything clear central.","maxScore":57,"minScore":42,"description":"Answer drop international heavy degree involve. Trouble quickly magazine budget simply sound party.\nModel PM turn year claim magazine improve. Everybody garden course loss should there.","estimatedTime":"9 weeks","previewFileId":"b2428b75-9176-42af-aa5a-93ceea4b099a","createdByUserId":"6b665e46-7200-4dc9-9af4-7f83d936744e"}'

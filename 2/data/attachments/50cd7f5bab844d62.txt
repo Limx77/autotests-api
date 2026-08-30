@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8000/api/v1/exercises/b1dfea6c-ea33-4ad8-8956-03a8582833fc' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTMwVDEyOjU1OjA2LjgzMzMwNyIsInVzZXJfaWQiOiI0YWIxZWU5Ni1lYzBjLTQ3N2YtYjU0Ny05MWUzNmZmYWU0NWYifQ.x62oWN7xA8gWSPEkQ61e8fwR96EF9JHTHdG2FUVJWgQ' \
+ -H 'content-length: 243' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Might news require join.","maxScore":75,"minScore":8,"orderIndex":75,"description":"Position rate thought newspaper itself. Benefit lawyer very one. Source effect seem election data contain fact important.","estimatedTime":"9 weeks"}'

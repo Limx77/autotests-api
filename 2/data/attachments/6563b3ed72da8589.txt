@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTMwVDEyOjU1OjA1LjQ1NzEyNyIsInVzZXJfaWQiOiIxODNiYzdmNS00NzllLTQ1M2EtOTZlZC02YWRjMDIxNTUyZmMifQ.Y09o9fI9aIGOwhj-R1XKV6ZWX3pajeRVQqhzkyHOt0U' \
+ -H 'content-length: 562' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Around then peace administration. Deep research begin thought wind close course. Year provide approach reduce.\nWho customer type force least available be. Consumer ready this water low.","maxScore":75,"minScore":5,"description":"Around sense lose range grow western. Gun money manager candidate. Market character exist church.\nWhite ready help. Take interesting yard easy. Skin sign design change event simply.","estimatedTime":"4 weeks","previewFileId":"a92edfff-4299-40e4-b5d2-f10f5cb081a5","createdByUserId":"183bc7f5-479e-453a-96ed-6adc021552fc"}'

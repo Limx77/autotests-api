@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/exercises' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTMwVDEyOjU1OjA4LjIzMDA1MiIsInVzZXJfaWQiOiI1OTg1YjQwMi0wNjUyLTQ0NTYtYjMyZi1hZGRkNjkwN2EzYTUifQ.pjYCp1RzvVWjLCKXEz7n5SfWat86xoqUa9HMz34M-ns' \
+ -H 'content-length: 317' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Analysis south one or hot shake hospital.","courseId":"44344ac4-8cc0-49d0-8c25-47773da3c1d9","maxScore":84,"minScore":23,"orderIndex":61,"description":"Film yet despite year.\nMachine environment drive no baby million oil. Me sign firm plant house. Federal how voice meeting not.","estimatedTime":"3 weeks"}'

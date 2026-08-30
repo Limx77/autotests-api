@@ -1,0 +1,25 @@
+INFO     HTTP Logger:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP Logger:event_hooks.py:36 Got 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP Logger:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP Logger:event_hooks.py:36 Got 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP Logger:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP Logger:event_hooks.py:36 Got 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP Logger:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP Logger:event_hooks.py:36 Got 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP Logger:event_hooks.py:28 Make GET request to http://localhost:8000/api/v1/courses?userId=6b665e46-7200-4dc9-9af4-7f83d936744e
+INFO     HTTP Logger:event_hooks.py:36 Got 200 OK from http://localhost:8000/api/v1/courses?userId=6b665e46-7200-4dc9-9af4-7f83d936744e
+INFO     COURSES_ASSERTIONS:courses.py:41 Check get courses response
+INFO     BASE_ASSERTIONS:base.py:65 Check that length of 'courses' equals to '1'
+INFO     COURSES_ASSERTIONS:courses.py:25 Check course
+INFO     USER_ASSERTIONS:users.py:34 Check user
+INFO     BASE_ASSERTIONS:base.py:33 Check that 'id' equals to '6b665e46-7200-4dc9-9af4-7f83d936744e'
+INFO     BASE_ASSERTIONS:base.py:33 Check that 'email' equals to 'brianmartin@example.com'
+INFO     BASE_ASSERTIONS:base.py:33 Check that 'first_name' equals to 'Zachary'
+INFO     BASE_ASSERTIONS:base.py:33 Check that 'last_name' equals to 'Silva'
+INFO     BASE_ASSERTIONS:base.py:33 Check that 'middle_name' equals to 'Michael'
+INFO     FILES_ASSERTIONS:files.py:39 Check file
+INFO     BASE_ASSERTIONS:base.py:33 Check that 'filename' equals to '4740b67d-098e-45a0-a6aa-f5554204b6d8.png'
+INFO     BASE_ASSERTIONS:base.py:33 Check that 'directory' equals to 'tests'
+INFO     BASE_ASSERTIONS:base.py:33 Check that 'url' equals to 'http://localhost:8000/static/tests/4740b67d-098e-45a0-a6aa-f5554204b6d8.png'
+INFO     BASE_ASSERTIONS:base.py:33 Check that 'id' equals to 'b2428b75-9176-42af-aa5a-93ceea4b099a'
+INFO     SCHEMA_ASSERTIONS:schema.py:18 Validate JSON schema

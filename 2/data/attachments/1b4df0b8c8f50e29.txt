@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTMwVDEyOjU1OjA2LjgzMzMwNyIsInVzZXJfaWQiOiI0YWIxZWU5Ni1lYzBjLTQ3N2YtYjU0Ny05MWUzNmZmYWU0NWYifQ.x62oWN7xA8gWSPEkQ61e8fwR96EF9JHTHdG2FUVJWgQ' \
+ -H 'content-length: 540' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Page soldier read occur. Production assume their especially store.\nRich two catch leave black hundred reveal defense. Because life role likely stuff.","maxScore":58,"minScore":20,"description":"Impact buy power mean. Number read success.\nNear current race need.\nBaby instead himself ever glass. Surface thus watch be box especially look. Dinner success role successful hard through fast.","estimatedTime":"8 weeks","previewFileId":"4f5fa139-f11d-4a71-abd1-d8c224d458dd","createdByUserId":"4ab1ee96-ec0c-477f-b547-91e36ffae45f"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTMwVDEyOjU1OjA4LjIzMDA1MiIsInVzZXJfaWQiOiI1OTg1YjQwMi0wNjUyLTQ0NTYtYjMyZi1hZGRkNjkwN2EzYTUifQ.pjYCp1RzvVWjLCKXEz7n5SfWat86xoqUa9HMz34M-ns' \
+ -H 'content-length: 584' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Son pick to world reflect everybody. Spend want table hold. Upon record laugh use put.\nBit include author price fly exist common. Beautiful off go believe above indicate. Identify help fact give.","maxScore":57,"minScore":42,"description":"Forward nation especially side body often. Follow kid health middle.\nInteresting next detail result weight management tax. Financial hit table collection single. Land evidence may traditional.","estimatedTime":"7 weeks","previewFileId":"8b560653-6a57-4fcc-a3fc-8ee3984447fb","createdByUserId":"5985b402-0652-4456-b32f-addd6907a3a5"}'

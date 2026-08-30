@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTMwVDEyOjU1OjAyLjM4OTg5NiIsInVzZXJfaWQiOiJhNDFmMjdiYy1hNDU1LTQ0NjAtOWJiNS05ZGZiYjc0OTk5NjIifQ.HL6pwcUTswz1Uvmg_-9GCRb5FFvQBucZZ8dy6MbESOE' \
+ -H 'content-length: 464' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Government sing join cost the. Theory interesting by author expect already collection. Child yourself floor admit Republican fast daughter.","maxScore":59,"minScore":40,"description":"Choose believe woman determine. Music real the education sound teach father. Wish front need state rest everybody president glass.","estimatedTime":"7 weeks","previewFileId":"987822c0-d576-4891-aafa-07c07687ec20","createdByUserId":"a41f27bc-a455-4460-9bb5-9dfbb7499962"}'

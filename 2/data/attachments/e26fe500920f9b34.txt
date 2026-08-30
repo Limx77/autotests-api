@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTMwVDEyOjU1OjAzLjQyOTU0MyIsInVzZXJfaWQiOiJlNDU0YWM1NS1mNWZjLTQyMzEtOTRmYi04NzM3MTQzODUwMjAifQ.u33Ly0VmBkdop0rUSnvwRj6VXisbR98U_Wf00A1CG3A' \
+ -H 'content-length: 473' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Your responsibility manager character offer understand. Property trouble newspaper boy community present. First off despite difference nor.","maxScore":75,"minScore":19,"description":"Throw white have notice hot we. Stay to pass voice senior.\nFull door him concern spring. Report run system. Husband west sometimes indeed.","estimatedTime":"8 weeks","previewFileId":"ac5aa518-9dfe-4554-9a26-c29eb0f4b4d3","createdByUserId":"e454ac55-f5fc-4231-94fb-873714385020"}'

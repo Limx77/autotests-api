@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8000/api/v1/courses' \
+ -H 'host: localhost:8000' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA4LTMwVDEyOjU1OjEwLjYzMjg4MCIsInVzZXJfaWQiOiJjYjMxOTZmOS0zODVlLTQzMzctODRiZS1jNTcyOTk4OGQxOWEifQ.cItsInK_EvmxLlw_i70c_KtxGPZ0JSfwMomD8nfgHXc' \
+ -H 'content-length: 451' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Lose bad test without result side blue. Too pattern training drug other note sell. Sister serve art order put maintain.","maxScore":67,"minScore":23,"description":"Time effort piece necessary up pass trip. Year forward society author could professional I. Capital dream add fact pretty likely ago sea.","estimatedTime":"4 weeks","previewFileId":"89a7d793-acf7-402a-9534-469f0aabd190","createdByUserId":"cb3196f9-385e-4337-84be-c5729988d19a"}'
